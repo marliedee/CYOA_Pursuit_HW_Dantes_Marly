@@ -154,11 +154,3 @@ public class LoveRoad implements StartGameOn {
 }
 
 
-//    This assignment is fairly open-ended, so be creative with your game ideas and have fun! However, the completed submission should include each of the following requirements:
-//
-//        Accept input from the user with a Scanner object
-//        At least one if/else-if/else type control structure, AND one switch statement
-//        At least one while loop, AND one for loop
-//        All of the above should exist in methods
-//        At least one class and one interface
-
