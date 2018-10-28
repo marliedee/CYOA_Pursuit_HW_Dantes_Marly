@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class LoveRoad implements StartGameOn {
+
     Scanner scanner = new Scanner(System.in);
 
 
@@ -12,10 +13,23 @@ public class LoveRoad implements StartGameOn {
         instructions();
         choiceColors();
         choiceNumbers();
-        for (int i = 0; i <= 3; i++) {
-            playAgain();
+
+        System.out.println("\nThanks for playing! Type 'Y' to play again. Or type 'N' to end <3\n");
+
+        String userInputEnd = scanner.nextLine();
+        if (userInputEnd.toLowerCase().equals("y")) {
+            for (int i = 0; i <= 2; i++) {
+                playAgain();
+            }
+            gamePlayAgain();
+
         }
-        gamePlayAgain();
+
+        String userInputEndNo = scanner.nextLine();
+        if (userInputEndNo.toLowerCase().equals("n")) {
+            endGame();
+        }
+
     }
 
 
@@ -70,11 +84,11 @@ public class LoveRoad implements StartGameOn {
 
         switch (numberChoice) {
             case 1:
-                numberChoiceInput = "You have the place, which you can touch, and it`ll make you crazy...It's your heart!\n Press Enter to continue...";
+                numberChoiceInput = "You have a place, which you can touch, and it'll make you crazy...It's your heart!\n Press Enter to continue...";
                 scanner.nextLine();
                 break;
             case 2:
-                numberChoiceInput = "You've will fall head over heels soon!\n You know you're in love when you can't fall asleep because reality is finally better than your dreams.\n Press Enter to continue...";
+                numberChoiceInput = "You will fall head over heels soon!\n You know you're in love when you can't fall asleep because reality is finally better than your dreams.\n Press Enter to continue...";
                 scanner.nextLine();
                 break;
             case 3:
@@ -82,11 +96,11 @@ public class LoveRoad implements StartGameOn {
                 scanner.nextLine();
                 break;
             case 4:
-                numberChoiceInput = "Be wary who you give your hear to.\n We accept the love we think we deserve.\n Press Enter to continue...";
+                numberChoiceInput = "Be wary who you give your heart to.\n We accept the love we think we deserve.\n Press Enter to continue...";
                 scanner.nextLine();
                 break;
             case 5:
-                numberChoiceInput = "A true rebel with a heart of gold.\n You speak what's on your mind and know that it is better to be hated for what you are than to be loved for what you are not..\n Press Enter to continue...";
+                numberChoiceInput = "A true rebel with a heart of gold.\n You speak what's on your mind and know that it is better to be hated for what you are than to be loved for what you are not.\n Press Enter to continue...";
                 scanner.nextLine();
                 break;
             case 6:
@@ -94,7 +108,7 @@ public class LoveRoad implements StartGameOn {
                 scanner.nextLine();
                 break;
             case 7:
-                numberChoiceInput = "There is never a time or place for true love. It happens accidentally, in a heartbeat, in a single flashing moment.\n Press Enter to continue...";
+                numberChoiceInput = "There is never a time or place for true love. It happens accidentally, in a heartbeat, in a single flashing moment.For you this will happen soon!\n Press Enter to continue...";
                 scanner.nextLine();
                 break;
             case 8:
@@ -114,22 +128,12 @@ public class LoveRoad implements StartGameOn {
     }
 
     private void playAgain() {
+        instructions();
+        choiceColors();
+        choiceNumbers();
 
-        System.out.println("\nThanks for playing! Type 'Y' to play again. Or type 'N' to end <3\n");
-        String userInputEnd=scanner.nextLine();
-
-        if (userInputEnd.toLowerCase().equals("y")) {
-            instructions();
-            choiceColors();
-            choiceNumbers();
-        } else if (userInputEnd.toLowerCase().equals("n")) {
-
-            System.out.println("Have a lovely day!");
-
-        } else {
-            System.out.println("Sorry lovely -- Wrong input!");
-        }
     }
+
 
 
     @Override
